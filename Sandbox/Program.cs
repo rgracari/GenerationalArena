@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GenerationalArena;
+using System;
 
 namespace Sandbox
 {
@@ -6,7 +7,15 @@ namespace Sandbox
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Arena<string> arena = new Arena<string>();
+            Console.WriteLine(arena);
+
+            GenerationalIndex rafou = arena.Add("Rafou");
+            GenerationalIndex math = arena.Add("Mathieu");
+            Console.WriteLine(rafou);
+            Console.WriteLine(math);
+
+            Console.WriteLine(arena);
         }
     }
 }
